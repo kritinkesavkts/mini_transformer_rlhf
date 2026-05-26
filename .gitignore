@@ -1,0 +1,20 @@
+# Python Cache Files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# PyTorch/Training outputs
+rlhf_outputs/
+
+# OS specific files
+.DS_Store
+Thumbs.db
+
+# IDEs and editors
+.vscode/
+.idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.swp
