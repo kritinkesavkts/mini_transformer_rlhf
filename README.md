@@ -12,10 +12,10 @@ This codebase operates across six distinct phases, mirroring the exact methodolo
 
 ```mermaid
 graph TD
-    Phase1["Phase 1: Supervised Fine-Tuning (SFT)"] -->|Fine-tuned Policy| Phase2["Phase 2: Candidate Generation"]
-    Phase2 -->|Varying Temps (0.5 - 1.1)| Phase3["Phase 3: Simulated Annotation"]
-    Phase3 -->|Pairs: (Prompt, Preferred, Rejected)| Phase4["Phase 4: Reward Model (RM) Training"]
-    Phase4 -->|Frozen Reward Judge| Phase5["Phase 5: RL (PPO-inspired) Loop"]
+    Phase1["Phase 1: Supervised Fine-Tuning SFT"] -->|Fine-tuned Policy| Phase2["Phase 2: Candidate Generation"]
+    Phase2 -->|Varying Temps 0.5 to 1.1| Phase3["Phase 3: Simulated Annotation"]
+    Phase3 -->|Preferred vs Rejected Pairs| Phase4["Phase 4: Reward Model RM Training"]
+    Phase4 -->|Frozen Reward Judge| Phase5["Phase 5: RL PPO-inspired Loop"]
     Phase1 -->|Frozen SFT Reference Policy| Phase5
     Phase5 -->|Align Policy Weights| Phase6["Phase 6: Evaluation & Plotting"]
 ```
